@@ -1,0 +1,54 @@
+﻿
+6.24 
+IIC
+IIC四个控制寄存器：SIMC0，SIMC1，SIMA和I2CTOC,SIMD
+SIMD:用于存储正在传输和接收对的数据
+
+
+Git教程：
+	·创建版本库
+		第一步:创建目录 
+			mkdir learngit
+			cd learngit
+			pwd 
+		第二步:将该目录变成Git可以管理的仓库
+			git init
+	·把文件添加到版本库
+		git add <file>  //告诉git把文件添加到仓库，可以添加多个文件
+		git commit -m <message> //把文件提交到仓库
+时光穿梭：
+	·随时掌握工作区的状态 git status
+	·git diff
+	版本回退：
+		·HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命
+			令git reset --hard commit_id。
+
+		·穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+
+		·要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+
+	工作区和暂存区
+		`版本库 .git
+		`git add:把要提交的所有修改放到暂存区（Stage），然后执行git commit 就可以一次性把暂存区的所有修改提交到分支
+	管理修改
+		·
+远程仓库
+	创建github账号，添加秘钥
+		（
+			在GitHub上免费托管的Git仓库，任何人都可以看到喔（但只有你自己才能改）。所以，不要把敏感			信息放进去
+			一个是交点保护费，让GitHub把公开的仓库变成私有的，这样别人就看不见了（不可读更不可写）。
+			另一个办法是自己动手，搭一个Git服务器
+		）
+	添加远程仓库
+		·关联远程仓库：git remote add origin git@server-name:path/repo-name.git；
+		·第一次推送master分支的所有内容：git push -u origin master
+		每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+		分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，
+		而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+	从远程仓库克隆
+		要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。git clone git@github.com:CoderNum/gitsiills.git
+		Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快
+	
+	
+	
+	
